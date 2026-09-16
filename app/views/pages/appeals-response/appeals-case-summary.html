@@ -34,73 +34,49 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Decision assisted dates
+          Date of claim
         </dt>
         <dd class="govuk-summary-list__value">
-          12/04/27 (Decision under appeal), 13/04/27 (MR)
+           12/04/27 
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link govuk-link--no-visited-state" href="appeals-decision-assist">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          <a class="govuk-link govuk-link--no-visited-state" href="appeals-case-type">Change<span class="govuk-visually-hidden"> name</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          12/04/27 (Decision under appeal)
+          Date of Appeal request
         </dt>
         <dd class="govuk-summary-list__value">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat maximus nulla. Aenean ullamcorper commodo eleifend. Nulla laoreet lorem urna, quis ornare eros commodo ac.
+           12/04/27 
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link govuk-link--no-visited-state" href="appeals-dates-preview-1">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          <a class="govuk-link govuk-link--no-visited-state" href="appeals-case-type">Change<span class="govuk-visually-hidden"> name</span></a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          13/04/27 (MR)
+          Date of Appeal request
         </dt>
         <dd class="govuk-summary-list__value">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat maximus nulla. Aenean ullamcorper commodo eleifend. Nulla laoreet lorem urna, quis ornare eros commodo ac.
+           12/04/27 
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link govuk-link--no-visited-state" href="appeals-dates-preview-1">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          <a class="govuk-link govuk-link--no-visited-state" href="appeals-case-type">Change<span class="govuk-visually-hidden"> name</span></a>
         </dd>
       </div>
-      
-      
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Which is the decision under appeal date?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Date of Outcome Decision (27/05/27)
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link govuk-link--no-visited-state" href="appeals-appeal-date">Change<span class="govuk-visually-hidden"> address</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Is there another benefit?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['another-benefit'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link govuk-link--no-visited-state" href="appeals-another-benefit">Change<span class="govuk-visually-hidden"> address</span></a>
-        </dd>
-      </div>
-      {% if data['another-benefit'] === "Yes" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Select the benefits that apply
           </dt>
           <dd class="govuk-summary-list__value">
-            Carers, ESA, UC
+            {{ data['benefits'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link govuk-link--no-visited-state" href="appeals-benefit-answer">Change<span class="govuk-visually-hidden"> address</span></a>
           </dd>
         </div>
+      {% if data['benefits'] == "Other" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             What is the carer benefit?
@@ -136,6 +112,63 @@
         </div>
       {% endif %}
     </dl>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          Assisted dates (1)
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> (University of Gloucestershire)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of first tier decision
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12/04/27
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First tier effective date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              13/04/27
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of MR decision
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12/04/27
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              MR effective date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              13/04/27
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which is the decision under appeal?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              MR decision
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
     <form action="appeals-tasklist" method="post" class="govuk-form-group">
       <div class="govuk-button-group">

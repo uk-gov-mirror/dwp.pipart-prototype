@@ -1,0 +1,63 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form name="second-benefit" action="appeals-case-summary" method="post" class="govuk-form-group">
+
+      <span class="govuk-caption-l">Appeal response</span>
+      <h1 class="govuk-heading-l">Edit benefit preview text</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Carer benefit detail
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">
+Although [Title] [Surname] has identified a high level of personal restriction, [he she] [Select is,was] entitled to Carer's Allowance (see Page [Page No]). To be entitled to Carer's Allowance a person must provide at least 35 hours of care to another disabled person each week. The Tribunal may wish to explore this further.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          ESA benefit detail
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">
+Although [Title] [Surname] [Select is,was] entitled to ESA, this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. ESA assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.</textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          UC benefit detail
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">
+Although [Title] [Surname] [Select is,was] entitled to Universal Credit (UC), this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. UC assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.</textarea>
+      </div>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/benefit-preview-3.js"></script>
+{% endblock %}

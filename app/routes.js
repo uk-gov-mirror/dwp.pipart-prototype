@@ -26,15 +26,17 @@ router.post('/gfs-answer', function (req, res) {
 
 router.post('/another-benefits', function (req, res) {
 
-  var benefitsAnswer = req.session.data['another-benefit']
+  var benefitsAnswer = req.session.data['benefits']
+
+  console.log(benefitsAnswer)
 
   // Check whether the variable matches a condition
-  if (benefitsAnswer == "Yes"){
+  if (benefitsAnswer == "None"){
     // Send user to next page
-    res.redirect('/pages/appeals-response/appeals-benefit-answer')
+    res.redirect('/pages/appeals-response/appeals-case-summary')
   } else {
     // Send user to ineligible page
-    res.redirect('/pages/appeals-response/appeals-case-summary')
+    res.redirect('/pages/appeals-response/appeals-what-benefit')
   }
 
 })

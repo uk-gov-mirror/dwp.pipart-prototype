@@ -13,134 +13,185 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <form action="appeals-dates-preview" method="post" class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-benefit-answer" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Decision assist
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        1st tier decision
+      </h2>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l">Appeal response</span>
-            <h1 class="govuk-fieldset__heading">
-              Decision assisted dates
-            </h1>
+        <fieldset class="govuk-fieldset" role="group">
+          <legend class="govuk-fieldset__legend">
+            Date of first tier decision
           </legend>
-          <div class="govuk-hint">
-            Select all options you want to include
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="assisted-1" name="assisted-dates" type="checkbox" value="email" data-aria-controls="conditional-assisted-1">
-              <label class="govuk-label govuk-checkboxes__label" for="assisted-1">
-                12/04/2027
-              </label>
-            </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-assisted-1">
-              <!-- Radios -->
+          <div class="govuk-date-input" id="first-tier-date">
+            <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend">
-                    Please select a decision for this date
-                  </legend>
-                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-1-1" name="assisted-radio-1" type="radio" value="england">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-1-1">
-                        Decision under appeal
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-1-2" name="assisted-radio-1" type="radio" value="scotland">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-1-2">
-                        MR
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-1-3" name="assisted-radio-1" type="radio" value="wales">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-1-3">
-                        Other decisions to include
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+                <label class="govuk-label govuk-date-input__label" for="first-tier-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-tier-date-day" name="first-tier-date-day" type="text" inputmode="numeric">
               </div>
             </div>
-            <!-- Date 2 -->
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="assisted-2" name="assisted-dates" type="checkbox" value="email" data-aria-controls="conditional-assisted-2">
-              <label class="govuk-label govuk-checkboxes__label" for="assisted-2">
-                12/04/2027
-              </label>
-            </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-assisted-2">
-              <!-- Radios -->
+            <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend">
-                    Please select a decision for this date
-                  </legend>
-                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-2-1" name="assisted-radio-2" type="radio" value="england">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-2-1">
-                        Decision under appeal
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-2-2" name="assisted-radio-2" type="radio" value="scotland">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-2-2">
-                        MR
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-2-3" name="assisted-radio-2" type="radio" value="wales">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-2-3">
-                        Other decisions to include
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+                <label class="govuk-label govuk-date-input__label" for="first-tier-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-tier-date-month" name="first-tier-date-month" type="text" inputmode="numeric">
               </div>
             </div>
-            <!-- Date 3 -->
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="assisted-3" name="assisted-dates" type="checkbox" value="email" data-aria-controls="conditional-assisted-3">
-              <label class="govuk-label govuk-checkboxes__label" for="assisted-3">
-                12/04/2027
-              </label>
-            </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-assisted-3">
-              <!-- Radios -->
+            <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend">
-                    Please select a decision for this date
-                  </legend>
-                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-3-1" name="assisted-radio-3" type="radio" value="england">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-3-1">
-                        Decision under appeal
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-3-2" name="assisted-radio-3" type="radio" value="scotland">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-3-2">
-                        MR
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="assisted-radio-3-3" name="assisted-radio-3" type="radio" value="wales">
-                      <label class="govuk-label govuk-radios__label" for="assisted-radio-3-3">
-                        Other decisions to include
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
+                <label class="govuk-label govuk-date-input__label" for="first-tier-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="first-tier-date-year" name="first-tier-date-year" type="text" inputmode="numeric">
               </div>
             </div>
           </div>
         </fieldset>
       </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group">
+          <legend class="govuk-fieldset__legend">
+            First tier effective date
+          </legend>
+          <div class="govuk-date-input" id="first-tier-effective-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="first-tier-effective-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-tier-effective-date-day" name="first-tier-effective-date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="first-tier-effective-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="first-tier-effective-date-month" name="first-tier-effective-date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="first-tier-effective-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="first-tier-effective-date-year" name="first-tier-effective-date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        MR decision
+      </h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group">
+          <legend class="govuk-fieldset__legend">
+            Date of MR decision
+          </legend>
+          <div class="govuk-date-input" id="mr-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="mr-date-day" name="mr-date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="mr-date-month" name="mr-date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="mr-date-year" name="mr-date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group">
+          <legend class="govuk-fieldset__legend">
+            MR effective date
+          </legend>
+          <div class="govuk-date-input" id="mr-effective-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-effective-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="mr-effective-date-day" name="mr-effective-date-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-effective-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="mr-effective-date-month" name="mr-effective-date-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="mr-effective-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="mr-effective-date-year" name="mr-effective-date-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+          <legend class="govuk-fieldset__legend">
+            Which is the decision under appeal?
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changedName">
+                First tier decision
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changedName-2">
+                MR decision
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <p class="govuk-body govuk-!-padding-bottom-3">
+        <a href="#" class="govuk-link">Add another decision</a>
+      </p>
 
       <div class="govuk-button-group">
         <button type="submit" class="govuk-button" data-module="govuk-button">
@@ -148,9 +199,6 @@
         </button>
         <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Save and exit
-        </a>
-        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Delete all data and refresh from PIPCS
         </a>
       </div>
     </form>
